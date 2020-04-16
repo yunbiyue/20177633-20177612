@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="pczuoye0" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<style>
+	.set{
+	 position:absolute;
+	 left:290px;
+	 top:320px;
+	}
+	.get{
+	 position:absolute;
+	 left:450px;
+	 top:110px;
+	}
+	.remove{
+	 position:absolute;
+	 left:340px;
+	 top:100px;
+	}
+	.del{
+	 position:absolute;
+	 left:170px;
+	 top:130px;
+	}
+	.jjj{
+	 position:absolute;
+	 left:50px;
+	 top:220px;
+	}
+	.xue{
+	 position:absolute;
+	 left:30px;
+	 top:350px;
+	}
+	.xi{
+	 position:absolute;
+	 left:370px;
+	 top:50px;
+	}
+	.le{
+	 position:absolute;
+	 left:120px;
+	 top:530px;
+	}
+	.ke{
+	 position:absolute;
+	 left:230px;
+	 top:90px;
+	}
+	.yi{
+	 position:absolute;
+	 left:460px;
+	 top:420px;
+	}
+	.shu{
+	 position:absolute;
+	 left:540px;
+	 top:400px;
+	}
+	</style>
+</head>
+
+<body style="background:url(1.jpg);background-repeat:no-repeat;">
+    <textarea>
+</textarea>
+    <button class="set"  id="bb">导师</button>
+    <button class="get" id="cc">学生</button>
+    <button class="remove" id="dd">学生</button>
+    <button class="del" id="ee">学生</button>
+	    <button class="jjj" id="ff">学生</button>
+		 <button class="xue"  id="gg">学生</button>
+			 <button class="xi"  id="hh">学生</button>
+			 <button class="le"  id="ii">学生</button>
+			 <button class="ke"  id="kk">学生</button>
+			 <button class="yi"  id="ll">学生</button>
+			 <button class="shu"  id="mm">学生</button>
+    <script>
+        console.log(localStorage.getItem('username'));
+
+        var ipt = document.querySelector('textarea');
+        var set = document.querySelector('.set');
+        var get = document.querySelector('.get');
+        var remove = document.querySelector('.remove');
+        var del = document.querySelector('.del');
+		        var jjj = document.querySelector('.jjj');
+       var val = ipt.value;
+        var arr=val.split("\n");
+
+
+
+        set.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[0];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('bb');
+          obj.innerHTML=b;
+        });
+
+
+
+
+
+
+        get.addEventListener('click', function() {
+           var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[1];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('cc');
+          obj.innerHTML=b;
+        });
+
+
+
+
+
+
+
+
+        remove.addEventListener('click', function() {
+            // 
+            sessionStorage.removeItem('uname');
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[2];
+          var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('dd');
+          obj.innerHTML=b;
+        });
+
+
+
+
+
+
+        del.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[3];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('ee');
+          obj.innerHTML=b;
+        });
+		
+		
+		jjj.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[4];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('ff');
+          obj.innerHTML=b;
+        });
+xue.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[5];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('gg');
+          obj.innerHTML=b;
+        });
+xi.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[6];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('hh');
+          obj.innerHTML=b;
+        });
+le.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[7];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('ii');
+          obj.innerHTML=b;
+        });
+		ke.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[8];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('kk');
+          obj.innerHTML=b;
+        });
+		yi.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[9];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('ll');
+          obj.innerHTML=b;
+        });
+		shu.addEventListener('click', function() {
+            var val = ipt.value;
+            var arr=val.split("\n");
+            var a = arr[10];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+            alert(c);
+           var obj=document.getElementById('mm');
+          obj.innerHTML=b;
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
