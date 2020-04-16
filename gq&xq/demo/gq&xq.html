@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>jQuery treeview</title>
+
+<link rel="stylesheet" href="../jquery.treeview.css" />
+<link rel="stylesheet" href="../red-treeview.css" />
+<link rel="stylesheet" href="screen.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script src="../jquery.treeview.js" type="text/javascript"></script>
+
+
+<link type ="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+<script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+		})
+
+	</script>
+</head>
+<body>
+
+
+<div id="main">写完收工
+
+<div id="sidetree">
+<div class="treeheader">&nbsp;</div>
+<div id="sidetreecontrol"><a href="?#">一键回收</a> | <a href="?#">一键展开</a></div>
+<ul id="tree"></ul>
+</div>
+</div>
+ <textarea>
+</textarea>
+    <button class="set"  id="bb">提交</button>
+
+    <script>
+
+
+
+
+        var ipt = document.querySelector('textarea');
+        var set = document.querySelector('.set');
+
+        //定义按钮事件
+        set.addEventListener('click', function() {
+        var val = ipt.value;
+        var arr=val.split("\n");
+
+        for(var i=0;i<arr.length;i++){
+
+            var a=arr[i];
+           var ass=a.split("：");
+          var b=ass[0];
+          var c=ass[1];
+          var aqq=c.split("、");
+
+          var li = document.createElement('li');
+
+          var ul = document.getElementById('tree');
+          var div = document.createElement('div');
+
+        ul.appendChild(li);
+        li.appendChild(div);
+          li.innerHTML=b;
+
+          var ul = document.createElement('ul');
+         li.appendChild(ul);
+
+        for(var j=0;j<aqq.length;j++){
+         var li = document.createElement('li');
+        var d=aqq[j];
+        ul.appendChild(li);
+        li.innerHTML=d;
+}
+ }
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+ });
+ </script>
+</body>
+</html>
